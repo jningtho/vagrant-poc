@@ -1,5 +1,5 @@
 # Single /Vagrantfile to initialize multi VMs 
-### Goal: Setup a LB nginx Server and test reverse Proxy with 2 Apache Servers at the backend
+### Goal: Setup a LB nginx Server and test reverse Proxy with 2 Apache Servers at the backend, mariaDB as a DB Server
 
 ## Topology
 
