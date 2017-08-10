@@ -1,18 +1,17 @@
 Vagrant.configure("2") do |config|
-    config.vm.define "lb01" do |lb01|
-      web01.vm.box = "ubuntu/trusty64"
-      web01.vm.hostname = 'lb01'
-      web01.vm.box_url = "ubuntu/trusty64"
+  config.vm.define "lb01" do |lb01|
+    lb01.vm.box = "ubuntu/trusty64"
+    lb01.vm.hostname = 'lb01'
+    lb01.vm.box_url = "ubuntu/trusty64"
 
-      web01.vm.network :private_network, ip: "192.168.56.100"
+    lb01.vm.network :private_network, ip: "192.168.56.100"
 
-      web01.vm.provider :virtualbox do |v|
-        v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
-        v.customize ["modifyvm", :id, "--memory", 512]
-        v.customize ["modifyvm", :id, "--name", "lb01"]
+    lb01.vm.provider :virtualbox do |v|
+      v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
+      v.customize ["modifyvm", :id, "--memory", 512]
+      v.customize ["modifyvm", :id, "--name", "lb01"]
+        end
       end
-    end
-
   config.vm.define "web01" do |web01|
     web01.vm.box = "ubuntu/trusty64"
     web01.vm.hostname = 'web01'
