@@ -20,7 +20,7 @@ Icon
 .Trashes
 .VolumeIcon.icns
 .com.apple.timemachine.donotpresent
-.vagrant
+.vagrant/machines/
 
 # Directories potentially created on remote AFP share
 .AppleDB
